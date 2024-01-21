@@ -10,6 +10,7 @@ export class Paiement {
     montant : string;
     @Column()
     date : Date;
+    
 
 
 
