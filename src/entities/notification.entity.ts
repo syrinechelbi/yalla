@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('notification')
 export class Notification {
@@ -10,6 +10,11 @@ export class Notification {
     libelle : string;
     @Column()
     contenu : string;
+    @CreateDateColumn()
+    createdAt: Date;
+ 
+    @UpdateDateColumn()
+    updatedAt: Date;
 
 
 
